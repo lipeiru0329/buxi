@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/share/share",
+    "pages/teacher/teacher",
+    "pages/data/data",
+    "pages/share_new/share_new",
+    "pages/choose/choose"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "学生",
+        "iconPath": "Image/student1.png",
+        "selectedIconPath": "Image/student1.png"
+      },
+      {
+        "pagePath": "pages/teacher/teacher",
+        "text": "老师",
+        "iconPath": "Image/teach.png",
+        "selectedIconPath": "Image/teach.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "text": "大厅",
+        "iconPath": "Image/dating.jpg",
+        "selectedIconPath": "Image/dating.jpg"
+      },
+      {
+        "pagePath": "pages/choose/choose",
+        "text": "管理",
+        "iconPath": "Image/teacher1.jpg",
+        "selectedIconPath": "Image/teacher1.jpg"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "Image/me.png",
+        "selectedIconPath": "Image/me.png"
+      }
+    ]
+  }
+}
