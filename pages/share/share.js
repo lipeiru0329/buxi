@@ -23,9 +23,9 @@ Page({
   //事件处理函数
   onVideoClick(event) {
     event.target.dataset.alphaBeta;
-    // wx.navigateTo({
-    //   url: '../video/video'
-    // })    
+    wx.navigateTo({
+      url: '../detail/detail?id=' + event.currentTarget.id 
+    })    
   },
 
   onLoad() {

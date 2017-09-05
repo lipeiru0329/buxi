@@ -27,7 +27,7 @@
         <text>刷新中...</text>
       </view>
       <block wx:for="{{videos}}" wx:for-index="idx" wx:key="{{idx}}">
-        <navigator url="../video/video?id={{item.youtubeId}}" class="row">
+        <navigator url="../detail/detail?id={{item.youtubeId}}" class="row">
           <view class="col-3">
             <image src="{{item.avatar}}" class="video-avatar" />
           </view>

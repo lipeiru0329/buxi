@@ -16,7 +16,7 @@ Page({
     userInfo: {},
     titImg: '/Image/p1-tit.png',
 
-    Fre_Type: ['一周一次', '一周两次', '一周三次', '一周四次','一周五次'],
+    Fre_Type: ['一周一次', '一周两次', '一周三次', '一周四次', '一周五次'],
     Fre_TypeIndex: 0,
 
     hour_Type: ['1.5h', '2h', '2.5h', '3h'],
@@ -227,7 +227,7 @@ Page({
     }
     else {
 
-      _module_before = _module_before + ' ' +  _module;
+      _module_before = _module_before + ' ' + _module;
       _tot = _tot + 1;
       temp++;
       app.globalData.num = temp;

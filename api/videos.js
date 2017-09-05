@@ -1,6 +1,4 @@
 const app = getApp()
-
-
 var videos = {
     "data": [
     {
@@ -151,13 +149,23 @@ var videos = {
 const loadVideos = (limit, page, query = '') => {
     // var cache_num = wx.getStorageSync('cache_num');
     // var cache = wx.getStorageSync('cache_key');
-  var cache_num = wx.getStorageSync('cache_num')
-  var cache = wx.getStorageSync('cache_key')
-    console.log(cache);
+  var cache_num = wx.getStorageSync('cache_num');
+  var cache = wx.getStorageSync('cache_key');
+  var data_student = (wx.getStorageSync('Student_data') || []);
+
+  console.log(data_student);
     var i = 1;
     for(i = 0; i < 10 ; i++)
     {
-      videos.data[i].avatar = app.globalData.userInfo.avatarUrl;
+      if (data_student.name_save)
+      {
+        console.log('start');
+        videos.data[0].avatar = app.globalData.userInfo.avatarUrl;
+        videos.data[0].title = app.globalData.userInfo.nickName + ' ' + data_student.module_save ;
+        videos.data[0].level = data_student.Fre_save + ' ';
+        videos.data[0].duration = data_student.hour_save;
+
+      }
       if (videos.data[i].id == cache_num[1]){
         if (cache[1])
           videos.data[i].likes = '/Image/zanzan.jpg';

@@ -1,0 +1,126 @@
+<!--pages/detail/detail.wxml-->
+  <!--index.wxml-->
+<view class="content">
+  <view class="tips_top">
+        <text>我是学生~</text>
+    </view>
+
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+  <view class="usermotto">
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+  </view>
+
+  <view class = "content_student">
+    
+    <view class="tips">
+        <text>说出你的要求，小仙帮你找老师~</text>
+    </view>
+
+    <image class="titImg" src="{{titImg}}"></image>
+
+    <view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >学生姓名 * </view>
+            <input class="session-val" name="name_in" type="text" id="name_in" 
+            bindchange="nameInput" value=""  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >联系电话 * </view>
+            <input class="session-val" name="contact_number_in" 
+            type="number" id="contact_number_in" 
+            bindchange="contactnumberInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >所在学院 * </view>
+            <input class="session-val" name="faculty_in" type="text" id="faculty_in" 
+            bindchange="facultyInput" value=""  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >所在年级 * </view>
+            <input class="session-val" name="year_in" 
+            type="text" id="year_in" 
+            bindchange="yearInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >科目需求 * </view>
+            <input class="session-val" name="module_in" 
+            type="text" id="module_in" 
+            bindchange="moduleInput" placeholder = "每次一个科目" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">上课频率</view>
+            <picker  id="Fre_Type" class="session-picker"  
+            bindchange="Fre_bindPickerChange" value="{{Fre_TypeIndex}}" 
+            range="{{Fre_Type}}">
+                <view class="picker">
+                  {{Fre_Type[Fre_TypeIndex]}}
+                </view>
+            </picker>
+        </view>        
+
+        <view class="session">
+            <view class="sessoin-tit">上课时长</view>
+            <picker  id="hour_Type" class="session-picker"  
+            bindchange="hour_bindPickerChange" 
+            value="{{hour_TypeIndex}}" range="{{hour_Type}}">
+                <view class="picker">
+                  {{hour_Type[hour_TypeIndex]}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >家教要求 * </view>
+            <input class="session-val" name="require_in" 
+            type="text" id="require_in" bindchange="requireInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >课时费要求 * </view>
+            <input class="session-val-small" name="Fee_in" type="number" 
+            id="Fee_in" bindchange="FeeInput" value="" /> 
+            <view class = "session-val-end" > /hour </view>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >预计补习时长 * </view>
+            <input class="session-val" name="tot_in" 
+            type="text" id="tot_in" bindchange="totInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >上课时间要求 * </view>
+            <input class="session-val" name="require_time_in" type="text" 
+            id="require_time_in" bindchange="require_timeInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >上课地点要求 * </view>
+            <input class="session-val" name="require_place_in" type="text" 
+            id="require_place_in" bindchange="require_placeInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >其他要求 * </view>
+            <input class="session-val" name="other_in" type="text" 
+            id="other_in" bindchange="otherInput" value="" /> 
+        </view>
+
+
+
+        <button class="myBtn" bindtap="find" >快速速帮我找</button>
+
+    </view>
+
+  </view>
+</view>
+
