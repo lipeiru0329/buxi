@@ -12,7 +12,7 @@
 .on{ color: #da7c0c;  
     border-bottom: 5rpx solid #da7c0c;}  
   
-.swiper-box{ display: block; height: 100%; width: 100%; }  
+.swiper-box{ display: block; height: 150%; width: 100%; }  
 .swiper-box view{  
     text-align: center;  
 }  

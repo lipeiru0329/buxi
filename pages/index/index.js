@@ -29,11 +29,12 @@ Page({
     module_Input: '',
     require_Input: '',
     Fee_Input: '',
-    tot_Input: '',
+    tot_Input: 0,
     require_time_Input: '',
     require_place_Input: '',
-    tot_Input: '',
+    //tot_Input: '',
     module_before: data_student.module_save,
+    tot_before: data_student.tot_save,
     tot_number: temp,
 
     other_Input: '',
@@ -195,7 +196,8 @@ Page({
     let _other = _this.data.other_Input;
 
     var _module_before = this.data.module_before;
-    var _tot = app.globalData.num_now;
+    var _tot_before = this.data.tot_before;
+    //var _tot = app.globalData.;
 
     //const len = this.data.modules.length
 
@@ -228,7 +230,7 @@ Page({
     else {
 
       _module_before = _module_before + ' ' +  _module;
-      _tot = _tot + 1;
+      _tot = _tot_before + ' ' + _tot;
       temp++;
       app.globalData.num = temp;
 

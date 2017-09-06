@@ -37,7 +37,7 @@ Page({
       time_tot_data: data_student.tot_save,
       require_time_data: data_student.require_time_save,
       require_place_data: data_student.require_place_save,
-      other_data_student: data_student.other,
+      other_data_student: data_student.other_save,
 
 
       NRIC_data: data_teacher.NRIC_save,

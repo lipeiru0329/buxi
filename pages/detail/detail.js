@@ -1,8 +1,9 @@
-//index.js
+//detail.js
 //获取应用实例
 var app = getApp()
 var temp = app.globalData.num
 var data_student = (wx.getStorageSync('Student_data') || [])
+var data_like = (wx.getStorageSync('Like_data') || [])
 
 Page({
   onShareAppMessage: function () {
@@ -22,21 +23,21 @@ Page({
     hour_Type: ['1.5h', '2h', '2.5h', '3h'],
     hour_TypeIndex: 0,
 
-    name_input: '',
-    contact_number_input: 0,
-    faculty_Input: '',
-    year_Input: '',
-    module_Input: '',
-    require_Input: '',
-    Fee_Input: '',
-    tot_Input: '',
-    require_time_Input: '',
-    require_place_Input: '',
-    tot_Input: '',
-    module_before: data_student.module_save,
-    tot_number: temp,
+    name_data: data_student.name_save,
+    contactnumber_data: data_student.number_save,
+    faculty_data: data_student.faculty_save,
+    year_data: data_student.year_save,
+    module_data: data_student.module_save,
+    Fre_data: data_student.Fre_save,
+    hour_data: data_student.hour_save,
+    Gen_re_data: data_student.require_save,
+    Free_re_data: data_student.Free_save,
+    time_tot_data: data_student.tot_save,
+    require_time_data: data_student.require_time_save,
+    require_place_data: data_student.require_place_save,
+    other_data_student: data_student.other_save,
 
-    other_Input: '',
+    like_data: data_like.like_now,
 
     // CheckBox
     inputContent: {},
@@ -53,99 +54,11 @@ Page({
   },
 
 
-  nameInput: function (e) {
-    this.setData({
-      name_input: e.detail.value
-    })
-  },
 
-  Fre_bindPickerChange: function (e) {
-    let _this = this;
-    _this.setData({
-      Fre_TypeIndex: e.detail.value
-    })
-  },
-
-  hour_bindPickerChange: function (e) {
-    let _this = this;
-    _this.setData({
-      hour_TypeIndex: e.detail.value
-    })
-  },
-
-  contactnumberInput: function (e) {
-    this.setData({
-      contact_number_input: e.detail.value
-    })
-  },
-
-
-  facultyInput: function (e) {
-    this.setData({
-      faculty_Input: e.detail.value
-    })
-  },
-
-
-  yearInput: function (e) {
-    let _this = this;
-    _this.setData({
-      year_Input: e.detail.value
-    })
-  },
-
-
-
-  moduleInput: function (e) {
-    this.setData({
-      module_Input: e.detail.value
-    })
-  },
-
-  requireInput: function (e) {
-    this.setData({
-      require_Input: e.detail.value
-    })
-  },
-
-  FeeInput: function (e) {
-    this.setData({
-      Fee_Input: e.detail.value
-    })
-  },
-
-  totInput: function (e) {
-    this.setData({
-      tot_Input: e.detail.value
-    })
-  },
-
-  require_timeInput: function (e) {
-    this.setData({
-      require_time_Input: e.detail.value
-    })
-  },
-
-  require_placeInput: function (e) {
-    this.setData({
-      require_place_Input: e.detail.value
-    })
-  },
-
-  otherInput: function (e) {
-    this.setData({
-      other_Input: e.detail.value
-    })
-  },
 
 
 
   //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
 
   onLoad: function () {
     console.log('onLoad')
@@ -181,21 +94,7 @@ Page({
   },
 
   find(e) {
-    let _this = this;
-    var _name = _this.data.name_input;
-    let _number = _this.data.contact_number_input;
-    var _faculty = this.data.faculty_Input;
-    var _year = _this.data.year_Input;
-    var _module = this.data.module_Input;
-    var _require = _this.data.require_Input;
-    let _Free = _this.data.Fee_Input;
-    var _tot = this.data.tot_Input;
-    var _require_time = this.data.require_time_Input;
-    var _require_place = _this.data.require_place_Input;
-    let _other = _this.data.other_Input;
-
-    var _module_before = this.data.module_before;
-    var _tot = app.globalData.num_now;
+    
 
     //const len = this.data.modules.length
 
@@ -205,68 +104,31 @@ Page({
     // return false;
     //console.log('Hello World', _time_tot);
 
-    if (
-      typeof (_name) == 'undefined' || !_name ||
-      typeof (_number) == 'undefined' || !_number ||
-      typeof (_faculty) == 'undefined' || !_faculty ||
-      typeof (_year) == 'undefined' || !_year ||
-      typeof (_module) == 'undefined' || !_module ||
-      typeof (_year) == 'undefined' || !_year ||
-      typeof (_require) == 'undefined' || !_require ||
-      typeof (_Free) == 'undefined' || !_Free ||
-      //typeof (_tot) == 'undefined' || !_tot ||
-      typeof (_require_time) == 'undefined' || !_require_time ||
-      typeof (_require_place) == 'undefined' || !_require_place ||
-      typeof (_other) == 'undefined' || !_other) {//!_this.data.Phy) {
-      wx.showModal({
-        title: '提示',
-        content: '请输入全部信息',
-        showCancel: false
-      });
-      return false;
+  
+
+    
+  },
+  like(e){
+    var data_like = (wx.getStorageSync('Like_data') || []);
+    var _like = data_like.like_now;
+    console.log(_like);
+    if(_like != 1){
+      _like = 1;
     }
-    else {
-
-      _module_before = _module_before + ' ' + _module;
-      _tot = _tot + 1;
-      temp++;
-      app.globalData.num = temp;
-
-      var Student_data = {
-        name_save: _name,
-        number_save: _number,
-        faculty_save: _faculty,
-        year_save: _year,
-        module_save: _module_before,
-        Fre_save: this.data.Fre_Type[this.data.Fre_TypeIndex],
-        hour_save: this.data.hour_Type[this.data.hour_TypeIndex],
-        require_save: _require,
-        Free_save: _Free,
-        tot_save: _tot,
-        require_time_save: _require_time,
-        require_place_save: _require_place,
-        other_save: _other,
-        tot_now: temp,
-
-      }
-
-      wx.setStorageSync('Student_data', Student_data);
-
-      console.log(temp);
-      console.log('姓名' + _name);
-      console.log('联系电话' + _number);
-      console.log('所在学院' + _faculty);
-      console.log('所在年级', _year);
-      console.log('科目需求' + _module_before);
-      console.log('上课频率' + this.data.Fre_Type[this.data.Fre_TypeIndex]);
-      console.log('上课时长' + this.data.hour_Type[this.data.hour_TypeIndex]);
-      console.log('家教要求' + _require);
-      console.log('课时费要求', _Free);
-      console.log('预计补习时长' + _tot);
-      console.log('上课时间要求' + _require_time);
-      console.log('执教经历' + _require_place);
-      console.log('其他要求' + _other);
-
+    else{
+      _like = 0;
     }
+    console.log('Come');
+    this.setData({
+      // collection 默认的是 false
+      current: _like
+      //sour: currentCache ? "/Image/diet_b.png" : "/Image/home_b.png"
+    });
+    console.log(_like);
+    var Like_data = {
+      like_now: _like
+    }
+    console.log(_like);
+    wx.setStorageSync('Like_data', Like_data);
   }
 })

@@ -15,6 +15,7 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">  
     <!-- 我是哈哈 -->  
     <swiper-item> 
+    <view class='content'>
       <view class="session">
             <view class="sessoin-tit"  >学生姓名 * </view>
             <input class="session-val" name="name_in" type="text" id="name_in" 
@@ -98,7 +99,7 @@
             <input class="session-val" name="other_in" type="text" 
             id="other_in" bindchange="otherInput" value="{{other_data_student}}" /> 
         </view>
-
+    </view>
 
     </swiper-item>  
     <!-- 我是呵呵 -->  
