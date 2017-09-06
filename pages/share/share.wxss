@@ -1,4 +1,4 @@
-/**index.wxss**/
+ /**index.wxss**/
 
 .activity {
   width: 750rpx;
@@ -8,7 +8,7 @@
 .activity image {
   width: 750rpx;
   height: 375rpx;
-}
+} 
 
 .container {
   height: 1500rpx;
@@ -20,7 +20,7 @@
 
 .row {
   margin: 15rpx 10rpx 5rpx 10rpx;
-  padding: 20rpx 10rpx 5rpx 10rpx;
+  padding: 20r px 10rpx 5rpx 10rpx;
   clear: both;
   box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
   background: rgba(255, 255, 255, 0.95);
@@ -81,4 +81,5 @@
 
 .zan{
   float: right;
+  margin: -80rpx 10rpx 5rpx 10rpx;
 }
