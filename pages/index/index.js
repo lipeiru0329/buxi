@@ -29,7 +29,7 @@ Page({
     module_Input: '',
     require_Input: '',
     Fee_Input: '',
-    tot_Input: 0,
+    tot_Input: '',
     require_time_Input: '',
     require_place_Input: '',
     //tot_Input: '',

@@ -34,7 +34,7 @@ Page({
       hour_data: data_student.hour_save,
       Gen_re_data: data_student.require_save,
       Free_re_data: data_student.Free_save,
-      time_tot_data: data_student.tot_save,
+      //time_tot_data: data_student.tot_save,
       require_time_data: data_student.require_time_save,
       require_place_data: data_student.require_place_save,
       other_data_student: data_student.other_save,
@@ -104,6 +104,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
+      time_tot_data: data_student.tot_save,
 
     });
     // setTab:function (e) { //设置选项卡选中索引
@@ -130,7 +131,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
-
+      time_tot_data: data_student.tot_save,
 
     })
   },
@@ -142,7 +143,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
-
+      time_tot_data: data_student.tot_save,
 
     })
   },
@@ -154,7 +155,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
-
+      time_tot_data: data_student.tot_save,
 
     })
   },
@@ -166,7 +167,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
-
+      time_tot_data: data_student.tot_save,
 
     })
   },
@@ -181,7 +182,7 @@ Page({
     this.setData({
 
       module_data: data_student.module_save,
-
+      time_tot_data: data_student.tot_save,
 
     });
   },

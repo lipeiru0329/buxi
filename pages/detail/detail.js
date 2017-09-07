@@ -27,12 +27,12 @@ Page({
     contactnumber_data: data_student.number_save,
     faculty_data: data_student.faculty_save,
     year_data: data_student.year_save,
-    module_data: data_student.module_save,
+    //module_data: data_student.module_save,
     Fre_data: data_student.Fre_save,
     hour_data: data_student.hour_save,
     Gen_re_data: data_student.require_save,
     Free_re_data: data_student.Free_save,
-    time_tot_data: data_student.tot_save,
+    //time_tot_data: data_student.tot_save,
     require_time_data: data_student.require_time_save,
     require_place_data: data_student.require_place_save,
     other_data_student: data_student.other_save,
@@ -67,7 +67,11 @@ Page({
     app.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
-        userInfo: userInfo
+        userInfo: userInfo,
+        module_data: data_student.module_save,
+        time_tot_data: data_student.tot_save,
+
+
       })
     })
     /*pageObject = {
