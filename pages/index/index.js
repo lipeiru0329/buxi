@@ -13,8 +13,24 @@ Page({
   },
   data: {
     // motto: 'Hello World',
+
+    showtab: 0,  //顶部选项卡索引
+    showtabtype: '', //选中类型
+    tabnav: {},  //顶部选项卡数据
+    startx: 0,  //开始的位置x
+    endx: 0, //结束的位置x
+    critical: 100, //触发切换标签的临界值
+    marginleft: 0,  //滑动距离
+    //module_data: "Phy",
+    currentTab: 0,
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换  
+    currentTab: 0,
+
     userInfo: {},
     titImg: '/Image/p1-tit.png',
+    
 
     Fre_Type: ['一周一次', '一周两次', '一周三次', '一周四次','一周五次'],
     Fre_TypeIndex: 0,
@@ -37,7 +53,20 @@ Page({
     tot_before: data_student.tot_save,
     tot_number: temp,
 
-    other_Input: '',
+    other_Input_student: '',
+
+    sex_Type: ['男', '女'],
+    sex_TypeIndex: 0,
+
+    education_Type: ['JC', 'Poly', 'Bachelor', 'Master', 'PHD'],
+    education_TypeIndex: 0,
+
+    name_input: '',
+    Fin_Input: '',
+    contact_number_input: 0,
+    outcome_Input: '',
+    history_Input: '',
+    other_Input_teacher: '',
 
     // CheckBox
     inputContent: {},
@@ -133,9 +162,57 @@ Page({
     })
   },
 
-  otherInput: function (e) {
+  otherInput_Student: function (e) {
     this.setData({
-      other_Input: e.detail.value
+      other_Input_Student: e.detail.value
+    })
+  },
+
+  sex_bindPickerChange: function (e) {
+    let _this = this;
+    _this.setData({
+      sex_TypeIndex: e.detail.value
+    })
+  },
+
+  FinInput: function (e) {
+    this.setData({
+      Fin_Input: e.detail.value
+    })
+  },
+
+
+  contactnumberInput: function (e) {
+    this.setData({
+      contact_number_input: e.detail.value
+    })
+  },
+
+
+  education_bindPickerChange: function (e) {
+    let _this = this;
+    _this.setData({
+      education_TypeIndex: e.detail.value
+    })
+  },
+
+
+
+  outcomeInput: function (e) {
+    this.setData({
+      outcome_Input: e.detail.value
+    })
+  },
+
+  historyInput: function (e) {
+    this.setData({
+      history_Input: e.detail.value
+    })
+  },
+
+  otherInput_Teacher: function (e) {
+    this.setData({
+      other_Input_Teacher: e.detail.value
     })
   },
 
@@ -148,16 +225,53 @@ Page({
     })
   },
 
+  swichNav: function (e) {
+    var that = this;
+    var data_student = (wx.getStorageSync('Student_data') || []);
+    var data_teacher = (wx.getStorageSync('Teacher_data') || []);
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+
+
+        module_data: data_student.module_save,
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
+
   onLoad: function () {
     console.log('onLoad')
-    var that = this
+    var that = this;
+    var temp = getApp();
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {
       //更新数据
       that.setData({
         userInfo: userInfo
       })
-    })
+    });
+
+    wx.getSystemInfo({
+
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    });
+
+
+    this.setData({
+
+      module_data: data_student.module_save,
+      time_tot_data: data_student.tot_save,
+
+    });
+
     /*pageObject = {
       data: {
         //modules: [],
@@ -193,7 +307,13 @@ Page({
     var _tot = this.data.tot_Input;
     var _require_time = this.data.require_time_Input;
     var _require_place = _this.data.require_place_Input;
-    let _other = _this.data.other_Input;
+    let _other_Student = _this.data.other_Input_Student;
+
+
+    var _Fin = this.data.Fin_Input;
+    var _outcome = _this.data.outcome_Input;
+    var _history = this.data.history_Input;
+    let _other_Teacher = _this.data.other_Input_Teacher;
 
     var _module_before = this.data.module_before;
     var _tot_before = this.data.tot_before;
