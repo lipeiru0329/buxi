@@ -38,6 +38,7 @@ Page({
       require_time_data: data_student.require_time_save,
       require_place_data: data_student.require_place_save,
       other_data_student: data_student.other_save,
+      like_data_student: data_student.like_save,
 
 
       NRIC_data: data_teacher.NRIC_save,
@@ -102,9 +103,30 @@ Page({
 
 
     this.setData({
-
+      name_data: data_student.name_save,
+      contactnumber_data: data_student.number_save,
+      faculty_data: data_student.faculty_save,
+      year_data: data_student.year_save,
       module_data: data_student.module_save,
+      Fre_data: data_student.Fre_save,
+      hour_data: data_student.hour_save,
+      Gen_re_data: data_student.require_save,
+      Free_re_data: data_student.Free_save,
       time_tot_data: data_student.tot_save,
+      require_time_data: data_student.require_time_save,
+      require_place_data: data_student.require_place_save,
+      other_data_student: data_student.other_save,
+      like_data_student: data_student.like_save,
+
+
+      NRIC_data: data_teacher.NRIC_save,
+      sex_data: data_teacher.sex_save,
+      education_data: data_teacher.education_save,
+      hisory_data: data_teacher.history_save,
+      outcome_data: data_teacher.outcome_save,
+      other_data_teacher: data_teacher.other_save,
+      // module_data: data_student.module_save,
+      // time_tot_data: data_student.tot_save,
 
     });
     // setTab:function (e) { //设置选项卡选中索引
@@ -181,8 +203,28 @@ Page({
     var data_teacher = (wx.getStorageSync('Teacher_data') || []);
     this.setData({
 
+      name_data: data_student.name_save,
+      contactnumber_data: data_student.number_save,
+      faculty_data: data_student.faculty_save,
+      year_data: data_student.year_save,
       module_data: data_student.module_save,
+      Fre_data: data_student.Fre_save,
+      hour_data: data_student.hour_save,
+      Gen_re_data: data_student.require_save,
+      Free_re_data: data_student.Free_save,
       time_tot_data: data_student.tot_save,
+      require_time_data: data_student.require_time_save,
+      require_place_data: data_student.require_place_save,
+      other_data_student: data_student.other_save,
+      like_data_student: data_student.like_save,
+
+
+      NRIC_data: data_teacher.NRIC_save,
+      sex_data: data_teacher.sex_save,
+      education_data: data_teacher.education_save,
+      hisory_data: data_teacher.history_save,
+      outcome_data: data_teacher.outcome_save,
+      other_data_teacher: data_teacher.other_save,
 
     });
   },

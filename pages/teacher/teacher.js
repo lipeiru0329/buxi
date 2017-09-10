@@ -10,7 +10,7 @@ Page({
   },
   data: {
     // motto: 'Hello World',
-    userInfo: {},
+    userInfo: {}, 
     titImg: '/Image/p1-tit.png',
 
     sex_Type: ['男', '女'],

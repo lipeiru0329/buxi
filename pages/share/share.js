@@ -4,8 +4,17 @@ import carouselsAPI from '../../api/carousels.js'
 
 //获取应用实例
 const app = getApp()
+var data_student = (wx.getStorageSync('Student_data') || [])
+
 
 Page({
+  // onPullDownRefresh: function () {
+  //   wx.startPullDownRefresh();
+  //   console.log('Sure');
+  //   this.reloadVideos();
+  //   this.initZan();
+  // },
+
   data: {
     //videos: videosAPI.loadVideos(1, 2).data,
     hasMore: true,
@@ -17,7 +26,8 @@ Page({
     indicatorDots: true,
     videos : [],
     id : 1,
-    imgUrls: []
+    imgUrls: [],
+    userInfo: {}
   },
 
   //事件处理函数
@@ -29,9 +39,38 @@ Page({
   },
 
   onLoad() {
+    console.log('onLoad')
+    var that = this;
+    var temp = getApp();
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    });
     this.refresh();
     this.initCarousel();
     this.initZan();
+  },
+
+  onPullDownRefresh() {
+    var data_student = (wx.getStorageSync('Student_data') || [])
+    console.log('Sure');
+    var that = this;
+    var temp = getApp();
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    });
+    this.refresh();
+    this.initCarousel();
+    //this.reloadVideos();
+    this.initZan();
+    //console.log('onPullDownRefresh', new Date())
   },
   
   initZan(){
@@ -124,6 +163,24 @@ Page({
         // };
         // 取反，点赞的变成未点赞 未点赞的变成点赞
         currentCache = !currentCache;
+        if(currentCache)
+        {
+          console.log(this.data.userInfo.nickName);
+          var Student_data = {
+            like_save: this.data.userInfo.nickName,
+
+          }
+
+          wx.setStorageSync('Student_data', Student_data);
+        }
+        else{
+          var Student_data = {
+            like_save: '',
+
+          }
+
+          wx.setStorageSync('Student_data', Student_data);
+        }
         // 更新cache中的对应的1个的缓存值，使其等于当前取反的缓存值
         cache[this.data.currentId] = currentCache;
         cache_num[this.data.currentId] = now_num;
@@ -145,7 +202,7 @@ Page({
         });
         // 交互反馈
         wx.showToast({
-            title: currentCache? now_num:'取消',
+            title: currentCache? '喜欢':'取消',
             icon: 'success',
             duration: 1000
         });
@@ -168,7 +225,7 @@ Page({
     let that = this;
     setTimeout(() => {
       that.setData({
-        videos: [...that.data.videos, ...videosAPI.loadVideos(that.data.page, 2).data],
+        videos: [...that.data.videos, ...videosAPI.loadVideos(that.data.page, 1).data],
         page: that.data.page ++
       })
     }, 1000);
@@ -177,14 +234,18 @@ Page({
 
   refresh() {
     this.setData({
-      videos: videosAPI.loadVideos(1, 2).data,
+      videos: videosAPI.loadVideos(0, 1).data,
       page: 1,
       initLoading: false,
       reloading: false,
     });
   },
 
-  onPullDownRefresh: function () {
-    console.log('onPullDownRefresh', new Date())
-  },
+  
+
+  onShow: function () {
+      this.setData({ reloading: true });
+      const that = this;
+      setTimeout(function () { that.refresh(); }, 2000);
+  }
 })

@@ -49,8 +49,10 @@ Page({
     require_time_Input: '',
     require_place_Input: '',
     //tot_Input: '',
-    module_before: data_student.module_save,
-    tot_before: data_student.tot_save,
+    module_before: '',
+    //module_before: data_student.module_save,
+    tot_before: '',
+    //tot_before: data_student.tot_save,
     tot_number: temp,
 
     other_Input_student: '',
@@ -66,7 +68,7 @@ Page({
     contact_number_input: 0,
     outcome_Input: '',
     history_Input: '',
-    other_Input_teacher: '',
+    other_Input_Teacher: '',
 
     // CheckBox
     inputContent: {},
@@ -295,7 +297,7 @@ Page({
     // pageObject.data['modules'].push(e.detail.value);
   },
 
-  find(e) {
+  find_student(e) {
     let _this = this;
     var _name = _this.data.name_input;
     let _number = _this.data.contact_number_input;
@@ -310,10 +312,10 @@ Page({
     let _other_Student = _this.data.other_Input_Student;
 
 
-    var _Fin = this.data.Fin_Input;
-    var _outcome = _this.data.outcome_Input;
-    var _history = this.data.history_Input;
-    let _other_Teacher = _this.data.other_Input_Teacher;
+    // var _Fin = this.data.Fin_Input;
+    // var _outcome = _this.data.outcome_Input;
+    // var _history = this.data.history_Input;
+    // let _other_Teacher = _this.data.other_Input_Teacher;
 
     var _module_before = this.data.module_before;
     var _tot_before = this.data.tot_before;
@@ -327,6 +329,20 @@ Page({
     // return false;
     //console.log('Hello World', _time_tot);
 
+    // console.log('姓名' + _name);
+    // console.log('联系电话' + _number);
+    // console.log('所在学院' + _faculty);
+    // console.log('所在年级', _year);
+    // console.log('科目需求' + _module_before);
+    // console.log('上课频率' + this.data.Fre_Type[this.data.Fre_TypeIndex]);
+    // console.log('上课时长' + this.data.hour_Type[this.data.hour_TypeIndex]);
+    // console.log('家教要求' + _require);
+    // console.log('课时费要求', _Free);
+    // console.log('预计补习时长' + _tot);
+    // console.log('上课时间要求' + _require_time);
+    // console.log('执教经历' + _require_place);
+    // console.log('其他要求' + _other_Student);
+
     if (
       typeof (_name) == 'undefined' || !_name ||
       typeof (_number) == 'undefined' || !_number ||
@@ -339,7 +355,7 @@ Page({
       //typeof (_tot) == 'undefined' || !_tot ||
       typeof (_require_time) == 'undefined' || !_require_time ||
       typeof (_require_place) == 'undefined' || !_require_place ||
-      typeof (_other) == 'undefined' || !_other) {//!_this.data.Phy) {
+      typeof (_other_Student) == 'undefined' || !_other_Student) {//!_this.data.Phy) {
       wx.showModal({
         title: '提示',
         content: '请输入全部信息',
@@ -349,10 +365,18 @@ Page({
     }
     else {
 
-      _module_before = _module_before + ' ' +  _module;
-      _tot = _tot_before + ' ' + _tot;
+      // if (_module_before == '')
+      // {
+         _module_before = _module;
+      // }
+      // else{
+      //   _module_before = _module_before + ' ' + _module;
+      // }
+      // _tot = _tot_before + ' ' + _tot;
       temp++;
       app.globalData.num = temp;
+
+      console.log('temp' + temp);
 
       var Student_data = {
         name_save: _name,
@@ -367,7 +391,7 @@ Page({
         tot_save: _tot,
         require_time_save: _require_time,
         require_place_save: _require_place,
-        other_save: _other,
+        other_save: _other_Student,
         tot_now: temp,
 
       }
@@ -387,7 +411,78 @@ Page({
       console.log('预计补习时长' + _tot);
       console.log('上课时间要求' + _require_time);
       console.log('执教经历' + _require_place);
-      console.log('其他要求' + _other);
+      console.log('其他要求' + _other_Student);
+
+    }
+  },
+
+
+  find_teacher(e) {
+    let _this = this;
+    var _name = _this.data.name_input;
+    let _number = _this.data.contact_number_input;
+    var _Fin = this.data.Fin_Input;
+    var _outcome = _this.data.outcome_Input;
+    var _history = this.data.history_Input;
+    let _other_teacher = _this.data.other_Input_Teacher;
+
+
+    //const len = this.data.modules.length
+
+    // wx.navigateTo({
+    //   url: '../logs/logs?type=1'
+    // });
+    // return false;
+    //console.log('Hello World', _time_tot);
+    // console.log('姓名' + _name);
+    // console.log('联系电话' + _number);
+    // console.log('教员NRIC/FIN' + _Fin);
+    // console.log('教员性别', this.data.sex_Type[this.data.sex_TypeIndex]);
+    // console.log('教员学历' + this.data.education_Type[this.data.education_TypeIndex]);
+    // console.log('教员成绩' + _outcome);
+    // console.log('执教经历' + _history);
+    // console.log('其他要求' + _other_teacher);
+
+    if (
+      typeof (_name) == 'undefined' || !_name ||
+      typeof (_number) == 'undefined' || !_number ||
+      typeof (_Fin) == 'undefined' || !_Fin ||
+      typeof (_outcome) == 'undefined' || !_outcome ||
+      typeof (_history) == 'undefined' || !_history ||
+      typeof (_other_teacher) == 'undefined' || !_other_teacher) {//!_this.data.Phy) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入全部信息',
+        showCancel: false
+      });
+      return false;
+    }
+    else {
+
+
+      var Teacher_data = {
+        name_save: _name,
+        number_save: _number,
+        NRIC_save: _Fin,
+        sex_save: this.data.sex_Type[this.data.sex_TypeIndex],
+        education_save: this.data.education_Type[this.data.education_TypeIndex],
+        outcome_save: _outcome,
+        history_save: _history,
+        other_save: _other_teacher,
+
+      }
+
+      wx.setStorageSync('Teacher_data', Teacher_data);
+
+
+      console.log('姓名' + _name);
+      console.log('联系电话' + _number);
+      console.log('教员NRIC/FIN' + _Fin);
+      console.log('教员性别', this.data.sex_Type[this.data.sex_TypeIndex]);
+      console.log('教员学历' + this.data.education_Type[this.data.education_TypeIndex]);
+      console.log('教员成绩' + _outcome);
+      console.log('执教经历' + _history);
+      console.log('其他要求' + _other_teacher);
 
     }
   }

@@ -111,7 +111,7 @@
         <view class="session">
         <button class="myBtn" bindtap="find" >联系一下</button>
         <button wx:if="{{current}}" class="myBtn-new" bindtap="like" >喜欢</button>
-        <button wx:else="{{current}}" class="myBtn" bindtap="like" >已关注</button>
+        <button wx:else="{{current}}" class="myBtn" bindtap="like" >关注一下</button>
         </view>
 
     </view>

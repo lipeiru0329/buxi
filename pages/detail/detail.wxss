@@ -190,7 +190,7 @@
 }
 
 .myBtn-new{
-   background-color:  #B6D4FA;
+   background-color:  #F3AE69;
    color: #fff;
    font-size: 26rpx;
    height: 88rpx;

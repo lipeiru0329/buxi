@@ -99,6 +99,13 @@
             <input class="session-val" name="other_in" type="text" 
             id="other_in" bindchange="otherInput" value="{{other_data_student}}" /> 
         </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >关注你的老师 * </view>
+            <input class="session-val" name="like_in" disabled='true' type="text" 
+            id="like_in" bindchange="likeInput" value="{{like_data_student}}" /> 
+        </view>
+
     </view>
 
     </swiper-item>  

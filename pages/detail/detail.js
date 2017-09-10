@@ -115,12 +115,25 @@ Page({
   like(e){
     var data_like = (wx.getStorageSync('Like_data') || []);
     var _like = data_like.like_now;
+    var _like_save = '';
     console.log(_like);
     if(_like != 1){
       _like = 1;
+      var Student_data = {
+        like_save: this.data.userInfo.nickName,
+
+      }
+
+      wx.setStorageSync('Student_data', Student_data);
     }
     else{
       _like = 0;
+      var Student_data = {
+        like_save: '',
+
+      }
+
+      wx.setStorageSync('Student_data', Student_data);
     }
     console.log('Come');
     this.setData({

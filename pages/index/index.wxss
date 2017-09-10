@@ -2,7 +2,7 @@
 .main_content{
   width: 100%;
   height: 100%;
-  //display: flex;
+  display: flex;
   flex-direction: column; 
 }
 .swiper-tab{  
@@ -27,7 +27,7 @@
 .on{ color: #da7c0c;  
     border-bottom: 5rpx solid #da7c0c;}  
   
-.swiper-box{ display: block; height: 300%; width: 100%; }  
+.swiper-box{ display: block; height: 150%; width: 100%; }  
 .swiper-box view{  
     text-align: center;  
 }  
@@ -75,12 +75,10 @@
 
 .content_student{
   width: 72%;
-  margin-top: 10rpx;
-  display: flex;
+  margin-top: 20rpx;
+  display: block;
   flex-direction: column; 
   margin-left: 100rpx;
-  //margin-right: 100rpx;
-  //margin: 10rpx 10rpx 10rpx 10rpx  #becee7; 
 }
 
 .tips_top{
@@ -230,6 +228,18 @@
    line-height: 88rpx;
    margin-top: 20rpx;
 }
+
+.myBtn_teacher{
+  background-color:  #6994c3;
+   color: #fff;
+   font-size: 26rpx;
+   height: 88rpx;
+   width: 60%;
+   line-height: 88rpx;
+   margin-top: 20rpx;
+   margin-left: 150rpx;
+}
+
 /** 修改button默认的点击态样式类**/
 .button-hover {
   background-color:  #6994c3;

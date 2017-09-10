@@ -149,9 +149,13 @@ var videos = {
 const loadVideos = (limit, page, query = '') => {
     // var cache_num = wx.getStorageSync('cache_num');
     // var cache = wx.getStorageSync('cache_key');
+    console.log(limit + ' ' + page);
   var cache_num = wx.getStorageSync('cache_num');
   var cache = wx.getStorageSync('cache_key');
   var data_student = (wx.getStorageSync('Student_data') || []);
+  var videos_new = {"data":[]};
+  //var videos_new.data[page] = {};
+  console.log(videos.data[0]);
 
   console.log(data_student);
     var i = 1;
@@ -168,13 +172,19 @@ const loadVideos = (limit, page, query = '') => {
       }
       if (videos.data[i].id == cache_num[1]){
         if (cache[1])
-          videos.data[i].likes = '/Image/zanzan.jpg';
-        else if (!cache[1])
           videos.data[i].likes = '/Image/zan.jpg';
+        else if (!cache[1])
+          videos.data[i].likes = '/Image/zanzan.jpg';
         console.log('Find');
       }
     }
-    return videos;
+    for(i = 0 ; i < page ; i++)
+    {
+      console.log(i);
+      videos_new.data = videos_new.data.concat(videos.data[i]);
+      //videos_new.data[i] = videos.data[i];
+    }
+    return videos_new;
 }
 
 const findVideo = (find_id) =>
@@ -184,6 +194,7 @@ const findVideo = (find_id) =>
     {
       if (this.videos.data[i].id == find_id)
         {
+          
             return this.data[i];
         }
     }
