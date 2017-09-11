@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-
+    like_list: data_student.like_save,
+    //like_list: data_student.like_save,
       showtab: 0,  //顶部选项卡索引
       showtabtype: '', //选中类型
       tabnav: {},  //顶部选项卡数据
@@ -101,7 +101,7 @@ Page({
 
     });
 
-
+    console.log(this.data.like_list);
     this.setData({
       name_data: data_student.name_save,
       contactnumber_data: data_student.number_save,
@@ -117,7 +117,8 @@ Page({
       require_place_data: data_student.require_place_save,
       other_data_student: data_student.other_save,
       like_data_student: data_student.like_save,
-
+      
+      like_list: data_student.like_save,
 
       NRIC_data: data_teacher.NRIC_save,
       sex_data: data_teacher.sex_save,
@@ -218,6 +219,7 @@ Page({
       other_data_student: data_student.other_save,
       like_data_student: data_student.like_save,
 
+      like_list: data_student.like_save,
 
       NRIC_data: data_teacher.NRIC_save,
       sex_data: data_teacher.sex_save,
@@ -227,6 +229,14 @@ Page({
       other_data_teacher: data_teacher.other_save,
 
     });
+  },
+
+  See_like: function(event){
+    console.log('Hello World!');
+    console.log(event.idx);
+    // wx.navigateTo({
+    //   url: '../detail/detail?id=' + event.currentTarget.id
+    // })  
   },
 
 

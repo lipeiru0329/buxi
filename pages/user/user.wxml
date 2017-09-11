@@ -102,8 +102,9 @@
 
         <view class="session">
             <view class="sessoin-tit"  >关注你的老师 * </view>
-            <input class="session-val" name="like_in" disabled='true' type="text" 
-            id="like_in" bindchange="likeInput" value="{{like_data_student}}" /> 
+            <navigator url="../detail/detail?id={{item.id}}" wx:for="{{[1]}}" wx:for-index="idx" wx:key="{{idx}}" bindchange="See_like">{{like_list}}</navigator>
+            <!-- <input class="session-val" name="like_in" disabled='true' type="text" 
+            id="like_in" bindchange="likeInput" value="{{like_data_student}}" />  -->
         </view>
 
     </view>
