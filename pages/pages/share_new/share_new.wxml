@@ -1,0 +1,6 @@
+<!--share_new.wxml-->
+<text>share_new.wxml</text>
+
+<image src="/Image/i-wx.png" bindtap="toCollect"></image>
+<image  wx:if="{{collection}}" src="/Image/home_b.png"   bindtap="toCollect"></image>
+<image wx:else = "{{collection}}" src="/Image/diet_b.png" bindtap="toCollect"></image>

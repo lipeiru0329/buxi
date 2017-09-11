@@ -1,0 +1,171 @@
+<view  bindtap="bindViewTap" class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>
+    
+<view class="usermotto">
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+</view> 
+
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我是学生</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我是老师</view>  
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">  
+    <!-- 我是哈哈 -->  
+    <swiper-item> 
+    <view class='content'>
+      <view class="session">
+            <view class="sessoin-tit"  >学生姓名 * </view>
+            <input class="session-val" name="name_in" type="text" id="name_in" 
+            bindchange="nameInput" value="{{name_data}}"  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >联系电话 * </view>
+            <input class="session-val" name="contact_number_in" 
+            type="number" id="contact_number_in" 
+            bindchange="contactnumberInput" value="{{contactnumber_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >所在学院 * </view>
+            <input class="session-val" name="faculty_in" type="text" id="faculty_in" 
+            bindchange="facultyInput" value="{{faculty_data}}"  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >所在年级 * </view>
+            <input class="session-val" name="year_in" 
+            type="text" id="year_in" 
+            bindchange="yearInput" value="{{year_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >科目需求 * </view>
+            <input class="session-val" name="module_in" 
+            type="text" id="module_in" 
+            bindchange="moduleInput" value="{{module_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">上课频率</view>
+            <input class = "session-val" name="Fre_in" 
+            type="text" id="Fre_in" 
+            bindchange="FreInput" value = "{{Fre_data}}" />
+        </view>        
+
+        <view class="session">
+            <view class="sessoin-tit">上课时长</view>
+            <input class = "session-val" name="hour_in" 
+            type="text" id="hour_in" 
+            bindchange="hourInput" value = "{{hour_data}}" />
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >家教要求 * </view>
+            <input class="session-val" name="require_in" 
+            type="text" id="require_in" bindchange="requireInput" value="{{Gen_re_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >课时费要求 * </view>
+            <input class="session-val-small" name="Fee_in" type="number" 
+            id="Fee_in" bindchange="FeeInput" value="{{Free_re_data}}" /> 
+            <view class = "session-val-end" > /hour </view>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >预计补习时长 * </view>
+            <input class="session-val" name="tot_in" 
+            type="text" id="tot_in" bindchange="totInput" value="{{time_tot_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >上课时间要求 * </view>
+            <input class="session-val" name="require_time_in" type="text" 
+            id="require_time_in" bindchange="require_timeInput" value="{{require_time_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >上课地点要求 * </view>
+            <input class="session-val" name="require_place_in" type="text" 
+            id="require_place_in" bindchange="require_placeInput" value="{{require_place_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >其他要求 * </view>
+            <input class="session-val" name="other_in" type="text" 
+            id="other_in" bindchange="otherInput" value="{{other_data_student}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >关注你的老师 * </view>
+            <input class="session-val" name="like_in" disabled='true' type="text" 
+            id="like_in" bindchange="likeInput" value="{{like_data_student}}" /> 
+        </view>
+
+    </view>
+
+    </swiper-item>  
+    <!-- 我是呵呵 -->  
+    <swiper-item>  
+      <view class="session">
+            <view class="sessoin-tit"  >教员姓名 * </view>
+            <input class="session-val" name="name" type="text" id="name" 
+            bindchange="nameInput" value="{{name_data}}"  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">教员性别</view>
+            <input class="session-val" name="sex_in" type="text" 
+            id="sex_in" bindchange="sexInput" value="{{sex_data}}"  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">教员NRIC/FIN * </view>
+            <input class="session-val" name="Fin_in" type="text" 
+            id="Fin_in" bindchange="FinInput" value="{{NRIC_data}}"  /> 
+
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >联系电话 * </view>
+            <input class="session-val" name="contact_number_in" 
+            type="number" id="contact_number_in" 
+            bindchange="contactnumberInput" value="{{contactnumber_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">教员学历</view>
+           <input class="session-val" name="education_data_in" 
+            type="text" id="education_data_in" 
+            bindchange="education_dataInput" value="{{education_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >教员成绩 * </view>
+            <input class="session-val" name="outcome_in" 
+            type="text" id="outcome_in" bindchange="outcomeInput" value="{{outcome_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >执教经历 * </view>
+            <input class="session-val" name="history_in" type="text" 
+            id="history_in" bindchange="historyInput" value="{{hisory_data}}" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >其他要求 * </view>
+            <input class="session-val" name="other_in" type="text" 
+            id="other_in" bindchange="otherInput" value="{{other_data_teacher}}" /> 
+        </view>
+
+
+    </swiper-item>  
+    <!-- 我是嘿嘿 -->  
+    <swiper-item>  
+      <view>我是嘿嘿</view>  
+    </swiper-item>  
+</swiper>  
