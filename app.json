@@ -8,7 +8,8 @@
     "pages/data/data",
     "pages/share_new/share_new",
     "pages/choose/choose",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/detail_teacher/detail_teacher"
   ],
   "window": {
     "backgroundTextStyle": "light",
