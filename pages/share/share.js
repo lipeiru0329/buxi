@@ -5,6 +5,7 @@ import carouselsAPI from '../../api/carousels.js'
 //获取应用实例
 const app = getApp()
 var data_student = (wx.getStorageSync('Student_data') || [])
+var temp = app.globalData.num
 
 
 Page({
@@ -233,8 +234,10 @@ Page({
   },
 
   refresh() {
+    var temp = app.globalData.num
+    console.log('now ' + temp);
     this.setData({
-      videos: videosAPI.loadVideos(0, 1).data,
+      videos: videosAPI.loadVideos(0, temp).data,
       page: 1,
       initLoading: false,
       reloading: false,
