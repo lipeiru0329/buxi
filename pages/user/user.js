@@ -8,12 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [{
-      message: 'foo',
-    }, {
-      message: 'bar'
-    }],
-    //like_list: data_student.like_save,
+    like_list: data_student.like_save,
     //like_list: data_student.like_save,
       showtab: 0,  //顶部选项卡索引
       showtabtype: '', //选中类型
@@ -108,13 +103,6 @@ Page({
 
     console.log(this.data.like_list);
     this.setData({
-      //like_list: data_student.like_save,
-      like_list: [{
-        "id": 369,
-      },
-      {
-        "id": 2324,
-      }],
       name_data: data_student.name_save,
       contactnumber_data: data_student.number_save,
       faculty_data: data_student.faculty_save,
@@ -183,14 +171,6 @@ Page({
     })
   },
 
-  See_like: function (event) {
-    console.log('Hello World!');
-    console.log(event);
-    wx.navigateTo({
-      url: '../detail_teacher/detail_teacher?id=' + event.currentTarget.id
-    })
-  },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -224,7 +204,6 @@ Page({
     var data_teacher = (wx.getStorageSync('Teacher_data') || []);
     this.setData({
 
-      like_list: data_student.like_save,
       name_data: data_student.name_save,
       contactnumber_data: data_student.number_save,
       faculty_data: data_student.faculty_save,
@@ -252,7 +231,13 @@ Page({
     });
   },
 
-  
+  See_like: function(event){
+    console.log('Hello World!');
+    console.log(event.idx);
+    // wx.navigateTo({
+    //   url: '../detail/detail?id=' + event.currentTarget.id
+    // })  
+  },
 
 
   /**

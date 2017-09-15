@@ -1,4 +1,3 @@
-
 <!--index.wxml-->
 <block wx:if="{{initLoading}}">
   <view class="page-loading">

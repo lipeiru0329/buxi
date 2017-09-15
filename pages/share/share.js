@@ -146,8 +146,6 @@ Page({
 
     toCollect: function(event) {
         // 获取所有的缓存
-        var data_student = (wx.getStorageSync('Student_data') || []);
-        var like_now = [];
         var now_num = event.currentTarget.id;
         var cache = wx.getStorageSync('cache_key');
         var cache_num = wx.getStorageSync('cache_num');
@@ -169,17 +167,8 @@ Page({
         if(currentCache)
         {
           console.log(this.data.userInfo.nickName);
-          var temp_like = [{
-            name: this.data.userInfo.nickName + "",
-          }];
-          like_now = like_now.concat(temp_like);
-          temp_like = [{
-            name: "sdfskdfsd",
-          }];
-          like_now = like_now.concat(temp_like);
-          console.log(like_now);
           var Student_data = {
-            like_save: like_now,
+            like_save: this.data.userInfo.nickName,
 
           }
 

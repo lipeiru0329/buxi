@@ -12,7 +12,7 @@
 .on{ color: #da7c0c;  
     border-bottom: 5rpx solid #da7c0c;}  
   
-.swiper-box{ display: block; height: 180%; width: 100%; }  
+.swiper-box{ display: block; height: 150%; width: 100%; }  
 .swiper-box view{  
     text-align: center;  
 }  
@@ -115,11 +115,6 @@
   line-height: 120rpx;
 }
 
-.session_like {
-  height: 120rpx;
-  line-height: 120rpx;
-}
-
 .session_checkbox {
   display:flex;
   width: 86.7%;
@@ -215,12 +210,5 @@
 .button-hover {
   background-color:  #6994c3;
   color: #fff;
-}
-
-.like_button{
-  background-color: orange;
-  margin: 0rpx 50rpx  0rpx  300rpx;
-  opacity: 0.7;
-  flex-direction: column;
 }
 
