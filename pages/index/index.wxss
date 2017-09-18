@@ -27,14 +27,14 @@
 .on{ color: #da7c0c;  
     border-bottom: 5rpx solid #da7c0c;}  
   
-.swiper-box{ display: block; height: 150%; width: 100%; }  
+.swiper-box{ display: block; height: 120%; width: 100%; }  
 .swiper-box view{  
     text-align: center;  
 }  
 
 .content{
   width: 100%;
-  height: 150%;
+  height: 100%;
   display: flex;
   flex-direction: column; 
    /*width: 750rpx;
@@ -133,7 +133,7 @@
 
 .session {
   display:flex;
-  height: 120rpx;
+  height: 100rpx;
   line-height: 120rpx;
 }
 

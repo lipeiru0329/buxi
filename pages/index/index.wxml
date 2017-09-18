@@ -133,10 +133,9 @@
 
   <swiper-item> 
 
-    <view class = "content_student">
-     
+    <view class = "content_student" >
 
-        <view>
+        <view style="display: block; height: 100%;">
 
         <view class="session">
             <view class="sessoin-tit"  >教员姓名 * </view>
@@ -153,6 +152,13 @@
                   {{sex_Type[sex_TypeIndex]}}
                 </view>
             </picker>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >教学科目 * </view>
+            <input class="session-val" name="module_teacher_in" 
+            type="text" id="module_teacher_in" 
+            bindchange="moduleteacherInput" placeholder = "每次一个科目" value="" /> 
         </view>
 
         <view class="session">

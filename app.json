@@ -8,7 +8,10 @@
     "pages/data/data",
     "pages/share_new/share_new",
     "pages/choose/choose",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/detail_teacher/detail_teacher",
+    "pages/share_teacher/share_teacher",
+    "pages/list_student/list_student"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,6 +23,12 @@
   "tabBar": {
     "list": [
       {
+        "pagePath": "pages/list_student/list_student",
+        "text": "录入",
+        "iconPath": "Image/student1.png",
+        "selectedIconPath": "Image/student1.png"
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "录入",
         "iconPath": "Image/student1.png",
@@ -28,6 +37,12 @@
       {
         "pagePath": "pages/share/share",
         "text": "找老师",
+        "iconPath": "Image/dating.jpg",
+        "selectedIconPath": "Image/dating.jpg"
+      },
+      {
+        "pagePath": "pages/share_teacher/share_teacher",
+        "text": "找学生",
         "iconPath": "Image/dating.jpg",
         "selectedIconPath": "Image/dating.jpg"
       },

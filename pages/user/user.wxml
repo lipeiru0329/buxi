@@ -100,12 +100,13 @@
             id="other_in" bindchange="otherInput" value="{{other_data_student}}" /> 
         </view>
 
-        <view class="session">
+        <view class="session_like">
             <view class="sessoin-tit"  >关注你的老师 * </view>
-            <navigator url="../detail/detail?id={{item.id}}" wx:for="{{[1]}}" wx:for-index="idx" wx:key="{{idx}}" bindchange="See_like">{{like_list}}</navigator>
+            
             <!-- <input class="session-val" name="like_in" disabled='true' type="text" 
             id="like_in" bindchange="likeInput" value="{{like_data_student}}" />  -->
         </view>
+        <button class = "like_button" bindtap="See_like">{{like_button}}</button>
 
     </view>
 
@@ -129,6 +130,13 @@
             <input class="session-val" name="Fin_in" type="text" 
             id="Fin_in" bindchange="FinInput" value="{{NRIC_data}}"  /> 
 
+        </view>
+
+         <view class="session">
+            <view class="sessoin-tit"  >教学科目 * </view>
+            <input class="session-val" name="module_teacher_in" 
+            type="text" id="module_teacher_in" 
+            bindchange="moduleteacherInput" value="{{module_data}}" /> 
         </view>
 
         <view class="session">

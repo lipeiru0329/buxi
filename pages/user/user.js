@@ -8,7 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    like_list: data_student.like_save,
+    array: [{
+      message: 'foo',
+    }, {
+      message: 'bar'
+    }],
+    //like_list: data_student.like_save,
     //like_list: data_student.like_save,
       showtab: 0,  //顶部选项卡索引
       showtabtype: '', //选中类型
@@ -39,9 +44,11 @@ Page({
       require_place_data: data_student.require_place_save,
       other_data_student: data_student.other_save,
       like_data_student: data_student.like_save,
+      like_button: '',
 
 
       NRIC_data: data_teacher.NRIC_save,
+      module_data: data_teacher.module_save,
       sex_data: data_teacher.sex_save,
       education_data: data_teacher.education_save,
       hisory_data: data_teacher.history_save,
@@ -103,6 +110,13 @@ Page({
 
     console.log(this.data.like_list);
     this.setData({
+      //like_list: data_student.like_save,
+      like_list: [{
+        "id": 369,
+      },
+      {
+        "id": 2324,
+      }],
       name_data: data_student.name_save,
       contactnumber_data: data_student.number_save,
       faculty_data: data_student.faculty_save,
@@ -171,6 +185,14 @@ Page({
     })
   },
 
+  See_like: function (event) {
+    console.log('Hello World!');
+    console.log(event);
+    wx.navigateTo({
+      url: '../detail_teacher/detail_teacher?id=' + event.currentTarget.id
+    })
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -204,6 +226,7 @@ Page({
     var data_teacher = (wx.getStorageSync('Teacher_data') || []);
     this.setData({
 
+      like_list: data_student.like_save,
       name_data: data_student.name_save,
       contactnumber_data: data_student.number_save,
       faculty_data: data_student.faculty_save,
@@ -229,16 +252,21 @@ Page({
       other_data_teacher: data_teacher.other_save,
 
     });
+    console.log(data_student.like_save.length);
+    if (data_student.like_save.length != 0)
+    {
+      this.setData({ like_button: '关注你的老师'});
+      //this.data.like_button = 'Like_teacher';
+    }
+
   },
 
-  See_like: function(event){
-    console.log('Hello World!');
-    console.log(event.idx);
-    // wx.navigateTo({
-    //   url: '../detail/detail?id=' + event.currentTarget.id
-    // })  
+  
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
   },
-
 
   /**
    * 页面上拉触底事件的处理函数

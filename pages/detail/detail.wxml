@@ -30,13 +30,6 @@
         </view>
 
         <view class="session">
-            <view class="sessoin-tit"  >联系电话 * </view>
-            <input class="session-val" name="contact_number_in" 
-            type="number" id="contact_number_in" 
-            bindchange="contactnumberInput" value="{{contactnumber_data}}" /> 
-        </view>
-
-        <view class="session">
             <view class="sessoin-tit"  >所在学院 * </view>
             <input class="session-val" name="faculty_in" type="text" id="faculty_in" 
             bindchange="facultyInput" value="{{faculty_data}}"  /> 
