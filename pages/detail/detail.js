@@ -24,7 +24,7 @@ Page({
     hour_TypeIndex: 0,
 
     name_data: data_student.name_save,
-    contactnumber_data: data_student.number_save,
+    //contactnumber_data: data_student.number_save,
     faculty_data: data_student.faculty_save,
     year_data: data_student.year_save,
     //module_data: data_student.module_save,
@@ -61,8 +61,8 @@ Page({
   //事件处理函数
 
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
+    console.log('onLoad');
+    var that = this;
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {
       //更新数据
@@ -82,6 +82,23 @@ Page({
           contact_number
       }
     }*/
+  },
+
+  onPullDownRefresh: function (e){
+    name_data: data_student.name_save;
+    //contactnumber_data: data_student.number_save,
+    faculty_data: data_student.faculty_save;
+    year_data: data_student.year_save;
+    //module_data: data_student.module_save,
+    Fre_data: data_student.Fre_save;
+    hour_data: data_student.hour_save;
+    Gen_re_data: data_student.require_save;
+    Free_re_data: data_student.Free_save;
+    //time_tot_data: data_student.tot_save,
+    require_time_data: data_student.require_time_save;
+    require_place_data: data_student.require_place_save;
+    other_data_student: data_student.other_save;
+   //like_data: data_like.like_now,
   },
 
   checkboxChange: function (e) {

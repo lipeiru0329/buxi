@@ -1,0 +1,96 @@
+  <!--index.wxml-->
+<view class="content">
+  <view class="tips_top">
+        <text>我是老师~</text>
+    </view>
+
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+  <view class="usermotto">
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+  </view>
+
+  <view class = "content_student">
+    
+    <view class="tips">
+        <text>说出你的要求，小仙帮你找老师~</text>
+    </view>
+
+    <image class="titImg" src="{{titImg}}"></image>
+
+    <view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >教员姓名 * </view>
+            <input class="session-val" name="name" type="text" id="name" 
+            bindchange="nameInput" value=""  /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">教员性别</view>
+            <picker  id="sex_Type" class="session-picker"  
+            bindchange="sex_bindPickerChange" value="{{sex_TypeIndex}}" 
+            range="{{sex_Type}}">
+                <view class="picker">
+                  {{sex_Type[sex_TypeIndex]}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit">教员NRIC/FIN * </view>
+            <input class="session-val" name="Fin_in" type="text" 
+            id="Fin_in" bindchange="FinInput" value=""  /> 
+
+        </view>
+
+        <!-- <view class="session">
+            <view class="sessoin-tit"  >联系电话 * </view>
+            <input class="session-val" name="contact_number_in" 
+            type="number" id="contact_number_in" 
+            bindchange="contactnumberInput" value="" /> 
+        </view> -->
+
+        <view class="session">
+            <view class="sessoin-tit">教员学历</view>
+            <picker  id="education_Type" class="session-picker"  
+            bindchange="education_bindPickerChange" 
+            value="{{education_TypeIndex}}" range="{{education_Type}}">
+                <view class="picker">
+                  {{education_Type[education_TypeIndex]}}
+                </view>
+            </picker>
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >教员成绩 * </view>
+            <input class="session-val" name="outcome_in" 
+            type="text" id="outcome_in" bindchange="outcomeInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >执教经历 * </view>
+            <input class="session-val" name="history_in" type="text" 
+            id="history_in" bindchange="historyInput" value="" /> 
+        </view>
+
+        <view class="session">
+            <view class="sessoin-tit"  >其他要求 * </view>
+            <input class="session-val" name="other_in" type="text" 
+            id="other_in" bindchange="otherInput" value="" /> 
+        </view>
+
+
+
+        <view class="session">
+        <!-- <button class="myBtn" bindtap="find" >联系一下</button> -->
+        <button wx:if="{{current}}" class="myBtn-new" bindtap="like" >喜欢</button>
+        <button wx:else="{{current}}" class="myBtn" bindtap="like" >关注一下</button>
+        </view>
+
+    </view>
+
+  </view>
+</view>

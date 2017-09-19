@@ -64,6 +64,7 @@ Page({
     education_TypeIndex: 0,
 
     name_input: '',
+    module_input: '',
     Fin_Input: '',
     contact_number_input: 0,
     outcome_Input: '',
@@ -174,6 +175,12 @@ Page({
     let _this = this;
     _this.setData({
       sex_TypeIndex: e.detail.value
+    })
+  },
+
+  moduleteacherInput:function(e){
+    this.setData({
+      module_input: e.detail.value
     })
   },
 
@@ -421,6 +428,7 @@ Page({
     let _this = this;
     var _name = _this.data.name_input;
     let _number = _this.data.contact_number_input;
+    var _module_teacher = this.data.module_input;
     var _Fin = this.data.Fin_Input;
     var _outcome = _this.data.outcome_Input;
     var _history = this.data.history_Input;
@@ -442,10 +450,12 @@ Page({
     // console.log('教员成绩' + _outcome);
     // console.log('执教经历' + _history);
     // console.log('其他要求' + _other_teacher);
+    // console.log('学科' + _module_teacher);
 
     if (
       typeof (_name) == 'undefined' || !_name ||
       typeof (_number) == 'undefined' || !_number ||
+      typeof (_module_teacher) == 'undefined' || !_module_teacher || 
       typeof (_Fin) == 'undefined' || !_Fin ||
       typeof (_outcome) == 'undefined' || !_outcome ||
       typeof (_history) == 'undefined' || !_history ||
@@ -463,6 +473,7 @@ Page({
       var Teacher_data = {
         name_save: _name,
         number_save: _number,
+        module_save: _module_teacher,
         NRIC_save: _Fin,
         sex_save: this.data.sex_Type[this.data.sex_TypeIndex],
         education_save: this.data.education_Type[this.data.education_TypeIndex],
