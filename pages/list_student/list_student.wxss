@@ -14,6 +14,7 @@
   height: 1500rpx;
 }
 
+<<<<<<< HEAD
 /* .item{
   //background: #B6D4FA;
   //margin: 16rpx;
@@ -25,6 +26,16 @@
   height: 128rpx;
   margin: 16rpx;
   border-radius: 30%;
+=======
+.video-item{
+  margin: 20rpx;
+  border-radius: 30%;
+}
+
+.video-item .video-avatar {
+  width: 200rpx;
+  height: 150rpx;
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 }
 
 .tips{

@@ -116,7 +116,7 @@
       <view class="session">
             <view class="sessoin-tit"  >教员姓名 * </view>
             <input class="session-val" name="name" type="text" id="name" 
-            bindchange="nameInput" value="{{name_data}}"  /> 
+             value="{{name_data}}"  /> 
         </view>
 
         <view class="session">

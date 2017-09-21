@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
   "enablePullDownRefresh": true
+=======
+  "enablePullDownRefresh": false
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 }
