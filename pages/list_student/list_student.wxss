@@ -15,8 +15,7 @@
 }
 
 .video-item{
-  background: #B6D4FA;
-  margin: 16rpx;
+  margin: 20rpx;
   border-radius: 30%;
 }
 

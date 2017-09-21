@@ -248,7 +248,7 @@ Page({
     var temp = app.globalData.num;
     var data_teacher = (wx.getStorageSync('Teacher_data') || []);
     console.log(data_teacher.name_save + '  ');
-    if (data_teacher.name_save != 'undefined') {
+    if (typeof(data_teacher.name_save) != 'undefined') {
       console.log('temp');
       temp++;
     }

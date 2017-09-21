@@ -187,9 +187,9 @@ Page({
 
   See_like: function (event) {
     console.log('Hello World!');
-    console.log(event);
+    console.log(event.currentTarget.id);
     wx.navigateTo({
-      url: '../detail_teacher/detail_teacher?id=' + event.currentTarget.id
+      url: '../list_student/list_student?id=' + event.currentTarget.id
     })
   },
 
@@ -252,8 +252,8 @@ Page({
       other_data_teacher: data_teacher.other_save,
 
     });
-    console.log(data_student.like_save.length);
-    if (data_student.like_save.length != 0)
+    console.log(data_student.like_save);
+    if (typeof(data_student.like_save) != 'undefined')
     {
       this.setData({ like_button: '关注你的老师'});
       //this.data.like_button = 'Like_teacher';

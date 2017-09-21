@@ -32,7 +32,7 @@
         <text class="weui-loading" />
         <text>刷新中...</text>
       </view>
-      <view class = "video-item">
+      <view>
         <block wx:for="{{videos}}" wx:for-index="idx" wx:key="{{idx}}">
           <view class="row">
           <navigator url="../detail/detail?id={{item.youtubeId}}" >
