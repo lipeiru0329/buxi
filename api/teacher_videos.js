@@ -11,7 +11,11 @@ var videos = {
         "slug": "simulation-2-d-entretien-d-embauche-de-recrutement-se-presenter",
         //"duration": "01:53",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "DW1K0XiwemI",
+=======
+        "youtubeId": "DW1K0XiwemI",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "DW1K0XiwemI",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -28,7 +32,11 @@ var videos = {
         "slug": "le-mot-du-champion-homonyme",
         "duration": "02:17",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "mMHpEEU5tTk",
+=======
+        "youtubeId": "mMHpEEU5tTk",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "mMHpEEU5tTk",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -45,7 +53,11 @@ var videos = {
         "slug": "cyprien-pourquoi-youtube-bloque-a-301-vues",
         "duration": "03:27",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "d3GlXEZJsRg",
+=======
+        "youtubeId": "d3GlXEZJsRg",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "d3GlXEZJsRg",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -62,7 +74,11 @@ var videos = {
         "slug": "strategies-de-mise-en-ligne-pour-les-chaines-de-jeux-video-sur-youtube",
         "duration": "02:52",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "wMqPyVnqDMw",
+=======
+        "youtubeId": "wMqPyVnqDMw",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "wMqPyVnqDMw",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -79,7 +95,11 @@ var videos = {
         "slug": "l-39-europeen-d-39-a-cote-theatre-antique-en-haute-normandie",
         "duration": "01:31",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "whFwLBFVRHQ",
+=======
+        "youtubeId": "whFwLBFVRHQ",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "whFwLBFVRHQ",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -96,7 +116,11 @@ var videos = {
         "slug": "et-si-on-s-39-parlait-du-harcelement-mauvaise-influence-youtube",
         "duration": "01:12",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "-YLmUiZs5qo",
+=======
+        "youtubeId": "-YLmUiZs5qo",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "-YLmUiZs5qo",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -113,7 +137,11 @@ var videos = {
         "slug": "helene-je-m-39-appelle-helene-clip-officiel",
         "duration": "04:29",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "OrBjkXziXnw",
+=======
+        "youtubeId": "OrBjkXziXnw",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "OrBjkXziXnw",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -130,7 +158,11 @@ var videos = {
         "slug": "pub-francaise-des-jeux-dede",
         "duration": "00:31",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "iMS1Vs30DX8",
+=======
+        "youtubeId": "iMS1Vs30DX8",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "iMS1Vs30DX8",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -147,7 +179,11 @@ var videos = {
         "slug": "l-amour-impossible-de-super-arbre",
         "duration": "00:49",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "wUQeZviZ94I",
+=======
+        "youtubeId": "wUQeZviZ94I",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "wUQeZviZ94I",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -164,7 +200,11 @@ var videos = {
         "slug": "un-piano-chez-le-dentiste",
         "duration": "00:40",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Id": "N1et8VnKbgg",
+=======
+        "youtubeId": "N1et8VnKbgg",
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
         "youtubeId": "N1et8VnKbgg",
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -209,6 +249,10 @@ const loadVideos = (limit, page, query = '') => {
         videos.data[0].level = data_teacher.education_save + ' ';
         //videos.data[0].duration = data_teacher.hour_save;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
 
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e

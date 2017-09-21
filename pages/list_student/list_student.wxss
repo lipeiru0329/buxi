@@ -15,6 +15,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .item{
   //background: #B6D4FA;
   //margin: 16rpx;
@@ -27,6 +28,8 @@
   margin: 16rpx;
   border-radius: 30%;
 =======
+=======
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 .video-item{
   margin: 20rpx;
   border-radius: 30%;
@@ -35,6 +38,9 @@
 .video-item .video-avatar {
   width: 200rpx;
   height: 150rpx;
+<<<<<<< HEAD
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
+=======
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 }
 

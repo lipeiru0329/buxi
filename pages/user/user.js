@@ -188,7 +188,11 @@ Page({
   See_like: function (event) {
     console.log('Hello World!');
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(event);
+=======
+    console.log(event.currentTarget.id);
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
     console.log(event.currentTarget.id);
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -257,8 +261,13 @@ Page({
 
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(data_student.like_save.length);
     if (data_student.like_save.length != 0)
+=======
+    console.log(data_student.like_save);
+    if (typeof(data_student.like_save) != 'undefined')
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
     console.log(data_student.like_save);
     if (typeof(data_student.like_save) != 'undefined')

@@ -248,7 +248,11 @@ Page({
     var data_teacher = (wx.getStorageSync('Teacher_data') || []);
     console.log(data_teacher.name_save + '  ');
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (data_teacher.name_save != 'undefined')
+=======
+    if (typeof (data_teacher.name_save) != 'undefined')
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
     if (typeof (data_teacher.name_save) != 'undefined')
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e

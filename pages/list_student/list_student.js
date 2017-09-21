@@ -27,7 +27,11 @@ Page({
     interval: 5000,
     indicatorDots: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     videos: [{ mode: 'scaleToFill'}],
+=======
+    videos: [],
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
     videos: [],
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -183,7 +187,11 @@ Page({
       like_now = like_now.concat(temp_like);
       console.log(like_now);
 <<<<<<< HEAD
+<<<<<<< HEAD
       var Teacher_data = {
+=======
+      var Student_data = {
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
       var Student_data = {
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
@@ -192,22 +200,32 @@ Page({
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       wx.setStorageSync('Teacher_data', Teacher_data);
     }
     else {
       var Teacher_data = {
 =======
+=======
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
       wx.setStorageSync('Teacher_data', Student_data);
     }
     else {
       var Student_data = {
+<<<<<<< HEAD
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
+=======
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         like_save: '',
 
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       wx.setStorageSync('Teacher_data', Teacher_data);
+=======
+      wx.setStorageSync('Teacher_data', Student_data);
+>>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
 =======
       wx.setStorageSync('Teacher_data', Student_data);
 >>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
