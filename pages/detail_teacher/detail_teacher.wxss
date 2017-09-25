@@ -172,10 +172,21 @@
    color: #fff;
    font-size: 26rpx;
    height: 88rpx;
-   width: 100%;
+   width: 60%;
    line-height: 88rpx;
    margin-top: 20rpx;
 }
+
+.myBtn-new{
+   background-color:  #FF9933;
+   color: #fff;
+   font-size: 26rpx;
+   height: 88rpx;
+   width: 60%;
+   line-height: 88rpx;
+   margin-top: 20rpx;
+}
+
 /** 修改button默认的点击态样式类**/
 .button-hover {
   background-color:  #6994c3;

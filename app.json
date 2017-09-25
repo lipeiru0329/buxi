@@ -11,7 +11,8 @@
     "pages/detail/detail",
     "pages/detail_teacher/detail_teacher",
     "pages/share_teacher/share_teacher",
-    "pages/list_student/list_student"
+    "pages/list_student/list_student",
+    "pages/list_teacher/list_teacher"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,12 +23,6 @@
   },
   "tabBar": {
     "list": [
-      {
-        "pagePath": "pages/list_student/list_student",
-        "text": "录入",
-        "iconPath": "Image/student1.png",
-        "selectedIconPath": "Image/student1.png"
-      },
       {
         "pagePath": "pages/index/index",
         "text": "录入",

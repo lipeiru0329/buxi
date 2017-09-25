@@ -45,6 +45,7 @@ Page({
       other_data_student: data_student.other_save,
       like_data_student: data_student.like_save,
       like_button: '',
+      like_button_teacher: '',
 
 
       NRIC_data: data_teacher.NRIC_save,
@@ -187,17 +188,15 @@ Page({
 
   See_like: function (event) {
     console.log('Hello World!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(event);
-=======
     console.log(event.currentTarget.id);
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-    console.log(event.currentTarget.id);
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
     wx.navigateTo({
       url: '../list_student/list_student?id=' + event.currentTarget.id
+    })
+  },
+
+  See_like_teacher: function(event){
+    wx.navigateTo({
+      url: '../list_teacher/list_teacher?id=' + event.currentTarget.id
     })
   },
 
@@ -260,21 +259,16 @@ Page({
       other_data_teacher: data_teacher.other_save,
 
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(data_student.like_save.length);
-    if (data_student.like_save.length != 0)
-=======
     console.log(data_student.like_save);
     if (typeof(data_student.like_save) != 'undefined')
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-    console.log(data_student.like_save);
-    if (typeof(data_student.like_save) != 'undefined')
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
     {
       this.setData({ like_button: '关注你的老师'});
       //this.data.like_button = 'Like_teacher';
+    };
+
+    if (typeof (data_teacher.like_save) != 'undefined') {
+      this.setData({ like_button_teacher: '关注你的学生' });
+     
     }
 
   },

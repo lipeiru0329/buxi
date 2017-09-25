@@ -13,35 +13,9 @@
 .container {
   height: 1500rpx;
 }
-
-.video-item{
-  margin: 20rpx;
-  border-radius: 30%;
-}
-
 .video-item .video-avatar {
-  width: 180rpx;
+  width: 200rpx;
   height: 150rpx;
-  ime-mode: aspectFit;
-}
-
-.tips{
-   font-size: 24rpx;
-   background: #B6D4FA;
-   width: 446rpx;
-   color: #4178b0;
-   border-radius: 30rpx;
-   text-align: center;
-   height: 50rpx;
-   line-height: 50rpx;
-   margin-left: 125rpx;
-}
-.titImg{
-  width: 550rpx;
-  height: 100rpx;
-  position: relative;
-  margin-top: -35rpx;
-  margin-left: 100rpx;
 }
 
 .row {
@@ -109,4 +83,3 @@
   float: right;
   margin: -80rpx 10rpx 5rpx 10rpx;
 }
-/* pages/list_student/list_student.wxss */

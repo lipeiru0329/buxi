@@ -1,10 +1,10 @@
 //index.js
-import videosAPI from '../../api/teacher_videos.js'
+import videosAPI from '../../api/videos.js'
 import carouselsAPI from '../../api/carousels.js'
 
 //获取应用实例
 const app = getApp()
-var data_teacher = (wx.getStorageSync('Teacher_data') || [])
+var data_student = (wx.getStorageSync('Student_data') || [])
 var temp = app.globalData.num
 
 
@@ -56,7 +56,7 @@ Page({
   },
 
   onPullDownRefresh() {
-    var data_teacher = (wx.getStorageSync('Teacher_data') || []);
+    var data_student = (wx.getStorageSync('Student_data') || [])
     console.log('Sure');
     var that = this;
     var temp = getApp();
@@ -146,7 +146,7 @@ Page({
 
   toCollect: function (event) {
     // 获取所有的缓存
-    var data_teacher = (wx.getStorageSync('Teacher_data') || []);
+    var data_student = (wx.getStorageSync('Student_data') || []);
     var like_now = [];
     var now_num = event.currentTarget.id;
     var cache = wx.getStorageSync('cache_key');
@@ -168,21 +168,22 @@ Page({
     currentCache = !currentCache;
     if (currentCache) {
       console.log(this.data.userInfo.nickName);
-      var temp_like = [{
-        name: this.data.userInfo.nickName + "",
-      }];
-      like_now = like_now.concat(temp_like);
-      temp_like = [{
-        name: "sdfskdfsd",
-      }];
-      like_now = like_now.concat(temp_like);
-      console.log(like_now);
+      // var temp_like = [{
+      //   name: this.data.userInfo.nickName + "",
+      // }];
+
+      like_now = like_now.concat(this.data.userInfo.nickName);
+      // temp_like = [{
+      //   name: "sdfskdfsd",
+      // }];
+      like_now = like_now.concat("dskfhskdjfk");
+      console.log(like_now[0]);
       var Student_data = {
         like_save: like_now,
 
       }
 
-      wx.setStorageSync('Teacher_data', Student_data);
+      wx.setStorageSync('Student_data', Student_data);
     }
     else {
       var Student_data = {
@@ -190,7 +191,7 @@ Page({
 
       }
 
-      wx.setStorageSync('Teacher_data', Student_data);
+      wx.setStorageSync('Student_data', Student_data);
     }
     // 更新cache中的对应的1个的缓存值，使其等于当前取反的缓存值
     cache[this.data.currentId] = currentCache;
@@ -244,14 +245,7 @@ Page({
   },
 
   refresh() {
-    var temp = app.globalData.num;
-    var data_teacher = (wx.getStorageSync('Teacher_data') || []);
-    console.log(data_teacher.name_save + '  ');
-    if (typeof (data_teacher.name_save) != 'undefined')
-    {
-      console.log('temp');
-      temp++;
-    } 
+    var temp = app.globalData.num
     console.log('now ' + temp);
     this.setData({
       videos: videosAPI.loadVideos(0, temp).data,

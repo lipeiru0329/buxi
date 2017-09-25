@@ -26,15 +26,7 @@ Page({
     duration: 1000,
     interval: 5000,
     indicatorDots: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    videos: [{ mode: 'scaleToFill'}],
-=======
     videos: [],
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-    videos: [],
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
     id: 1,
     imgUrls: [],
     userInfo: {}
@@ -186,49 +178,20 @@ Page({
       }];
       like_now = like_now.concat(temp_like);
       console.log(like_now);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      var Teacher_data = {
-=======
       var Student_data = {
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-      var Student_data = {
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         like_save: like_now,
 
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      wx.setStorageSync('Teacher_data', Teacher_data);
-    }
-    else {
-      var Teacher_data = {
-=======
-=======
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
       wx.setStorageSync('Teacher_data', Student_data);
     }
     else {
       var Student_data = {
-<<<<<<< HEAD
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         like_save: '',
 
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      wx.setStorageSync('Teacher_data', Teacher_data);
-=======
       wx.setStorageSync('Teacher_data', Student_data);
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-      wx.setStorageSync('Teacher_data', Student_data);
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
     }
     // 更新cache中的对应的1个的缓存值，使其等于当前取反的缓存值
     cache[this.data.currentId] = currentCache;

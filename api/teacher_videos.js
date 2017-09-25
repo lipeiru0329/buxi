@@ -10,15 +10,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/DW1K0XiwemI-1.jpg",
         "slug": "simulation-2-d-entretien-d-embauche-de-recrutement-se-presenter",
         //"duration": "01:53",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "DW1K0XiwemI",
-=======
         "youtubeId": "DW1K0XiwemI",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "DW1K0XiwemI",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "8",
         "level": "beginner"
     },
@@ -31,15 +23,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/mMHpEEU5tTk-1.jpg",
         "slug": "le-mot-du-champion-homonyme",
         "duration": "02:17",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "mMHpEEU5tTk",
-=======
         "youtubeId": "mMHpEEU5tTk",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "mMHpEEU5tTk",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "8",
         "level": "beginner"
     },
@@ -52,15 +36,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/d3GlXEZJsRg-1.jpg",
         "slug": "cyprien-pourquoi-youtube-bloque-a-301-vues",
         "duration": "03:27",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "d3GlXEZJsRg",
-=======
         "youtubeId": "d3GlXEZJsRg",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "d3GlXEZJsRg",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "8",
         "level": "beginner"
     },
@@ -73,15 +49,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/wMqPyVnqDMw-1.jpg",
         "slug": "strategies-de-mise-en-ligne-pour-les-chaines-de-jeux-video-sur-youtube",
         "duration": "02:52",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "wMqPyVnqDMw",
-=======
         "youtubeId": "wMqPyVnqDMw",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "wMqPyVnqDMw",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "7",
         "level": "beginner"
     },
@@ -94,15 +62,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/whFwLBFVRHQ-1.jpg",
         "slug": "l-39-europeen-d-39-a-cote-theatre-antique-en-haute-normandie",
         "duration": "01:31",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "whFwLBFVRHQ",
-=======
         "youtubeId": "whFwLBFVRHQ",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "whFwLBFVRHQ",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     },
@@ -115,15 +75,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/-YLmUiZs5qo-1.jpg",
         "slug": "et-si-on-s-39-parlait-du-harcelement-mauvaise-influence-youtube",
         "duration": "01:12",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "-YLmUiZs5qo",
-=======
         "youtubeId": "-YLmUiZs5qo",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "-YLmUiZs5qo",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     },
@@ -136,15 +88,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/OrBjkXziXnw-1.jpg",
         "slug": "helene-je-m-39-appelle-helene-clip-officiel",
         "duration": "04:29",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "OrBjkXziXnw",
-=======
         "youtubeId": "OrBjkXziXnw",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "OrBjkXziXnw",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     },
@@ -157,15 +101,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/iMS1Vs30DX8-1.jpg",
         "slug": "pub-francaise-des-jeux-dede",
         "duration": "00:31",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "iMS1Vs30DX8",
-=======
         "youtubeId": "iMS1Vs30DX8",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "iMS1Vs30DX8",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     },
@@ -178,15 +114,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/wUQeZviZ94I-1.jpg",
         "slug": "l-amour-impossible-de-super-arbre",
         "duration": "00:49",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "wUQeZviZ94I",
-=======
         "youtubeId": "wUQeZviZ94I",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "wUQeZviZ94I",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     },
@@ -199,15 +127,7 @@ var videos = {
         "avatar": "http://o9dnc9u2v.bkt.clouddn.com/videos/N1et8VnKbgg-1.jpg",
         "slug": "un-piano-chez-le-dentiste",
         "duration": "00:40",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "Id": "N1et8VnKbgg",
-=======
         "youtubeId": "N1et8VnKbgg",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-        "youtubeId": "N1et8VnKbgg",
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
         "state": "6",
         "level": "beginner"
     }],
@@ -226,7 +146,7 @@ var videos = {
     }
 }
 
-const loadVideos = (limit, page, query = '') => {
+const loadVideos = (page, limit, query = '') => {
     // var cache_num = wx.getStorageSync('cache_num');
     // var cache = wx.getStorageSync('cache_key');
     console.log(limit + ' ' + page);
@@ -248,14 +168,7 @@ const loadVideos = (limit, page, query = '') => {
         videos.data[0].title = app.globalData.userInfo.nickName + ' ' + data_teacher.module_save ;
         videos.data[0].level = data_teacher.education_save + ' ';
         //videos.data[0].duration = data_teacher.hour_save;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
-=======
-
->>>>>>> 7f66ae39369689d543d4db9905269321db774c1e
       }
       if (videos.data[i].id == cache_num[1]){
         if (cache[1])
@@ -265,7 +178,7 @@ const loadVideos = (limit, page, query = '') => {
         console.log('Find');
       }
     }
-    for(i = 0 ; i < page ; i++)
+    for (i = 0; i < limit ; i++)
     {
       console.log(i);
       videos_new.data = videos_new.data.concat(videos.data[i]);

@@ -16,6 +16,7 @@
 .video-item .video-avatar {
   width: 200rpx;
   height: 150rpx;
+  ime-mode: aspectFit;
 }
 
 .row {

@@ -171,6 +171,14 @@
             id="other_in" bindchange="otherInput" value="{{other_data_teacher}}" /> 
         </view>
 
+        <view class="session_like">
+            <view class="sessoin-tit"  >关注你的学生 * </view>
+            
+            <!-- <input class="session-val" name="like_in" disabled='true' type="text" 
+            id="like_in" bindchange="likeInput" value="{{like_data_student}}" />  -->
+        </view>
+        <button class = "like_button" bindtap="See_like_teacher">{{like_button_teacher}}</button>
+
 
     </swiper-item>  
     <!-- 我是嘿嘿 -->  

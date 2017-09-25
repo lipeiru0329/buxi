@@ -233,6 +233,14 @@ Page({
     }
     console.log(_like);
     wx.setStorageSync('Like_data', Like_data);
+    if(this.data.current == 1)
+    {
+      wx.showModal({
+        title: '提示',
+        content: '谢谢你的关注',
+        showCancel: false
+      });
+    }
   }
 
 })
